@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Meme Generator</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Welcome to Meme-Genie 🧞 </h1>
-        <div>
-            <textarea id="top-text"></textarea>
-            Text size: <input type="range" id="top-text-size-input" min="0.05" max="0.25" value="0.15" step="0.01">
+
+<head>
+    <meta charset="utf-8">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Welcome to Meme-Genie!</h1>
+        <!-- Get value In box -->
+        <section class="get-value">
+            <div>
+                <textarea id="top-text"></textarea>
+                <input type="range" id="top-text-size-input" min="0.05" max="0.25" value="0.15" step="0.01">
+            </div>
+            <div>
+                <textarea id="bottom-text"></textarea>
+                <input type="range" id="bottom-text-size-input" min="0.05" max="0.25" value="0.15" step="0.01">
+            </div>
+        </section>
+        <div class="file-name">
+            No file Chosen
         </div>
-            <textarea id="bottom-text"></textarea>
-            Text size: <input type="range" id="bottom-text-size-input" min="0.05" max="0.25" value="0.15" step="0.01">
-        </div>
-        <div>
-            <input type="file" id="image-input" accept="image/*">
-        </div>
-        <div>
-            <button id="generate-btn">Generate!</button>
-        </div>
-            <canvas id="meme-canvas" title="Right click to save this meme"></canvas>
-        <script src="script.js"></script>
-    </body>
+        <!-- --------------- -->
+        <section class="get-output">
+            <div>
+                <input type="file" id="image-input" accept="image/*" onchange="showname()">
+                
+            </div>
+            <div>
+                <button id="generate-btn">Generate!</button>
+            </div>
+        </section>
+        <div id = "popup" class="overlay">
+        <a id="close" onclick="refreshPage()" href="#">&times;</a>
+        <canvas id="meme-canvas" title="Right click to save this meme"></canvas></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
 </html>

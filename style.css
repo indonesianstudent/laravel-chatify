@@ -1,18 +1,109 @@
 h1 {
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
-    font-size: 30px;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
 }
-
-body{
+body {
   margin: 10px;
-  background-color: lightblue;
-
-
+  background-color: rgb(167, 189, 196);
+  height: 90vh;
+  display: grid;
+  place-items: center;
+  flex-wrap: wrap;
 }
+
 p {
   font-family: "sans-serif";
 }
 
-#meme-canvas {
-    width: 300px;
+#meme-canvas{
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom:0;
+  width: 500px;
+}
+#close{
+  display: none;
+  position: absolute;
+  top: -47px;
+  right: 3px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  background-color: #4CAF50;
+  width: 30px;
+  border-radius: 30px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  background: #eee;
+  width: 500px;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 2px 8px 8px -4px rgb(107, 136, 146);
+}
+
+.get-value {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.get-output {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.file-name{
+  margin-top: 10px;
+}
+
+#generate-btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 2px 5px 5px -4px rgb(107, 136, 146);
+}
+
+
+input[type='file'] {
+  color: rgba(250, 0, 0, 0);
+}
+
+::-webkit-file-upload-button{
+  background-color: rgb(63, 138, 203);
+  border-radius: 30px;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 2px 5px 5px -4px rgb(107, 136, 146);
+
+}
+
+#top-text {
+  border-radius: 2px;
+}
+
+#bottom-text {
+  border-radius: 2px;
 }

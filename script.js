@@ -50,11 +50,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const imageInput = document.getElementById('image-input');
     const generateBtn = document.getElementById('generate-btn');
     // Default/Demo text
-    topTextInput.value = 'Top\nValue';
-    bottomTextInput.value = 'Bottom\nValue';
+    topTextInput.value = 'Enter top value';
+    bottomTextInput.value = 'Enter bottom value';
 
     // Generate button click listener
+    const getImg = document.getElementById('meme-canvas');
+    const getImgClose = document.getElementById('close');
     generateBtn.addEventListener('click', () => {
+        getImgClose.style.display="block";
+        getImg.style.display="block";
         // Read image as DataURL using the FileReader API
         const reader = new FileReader();
         reader.onload = () => {
@@ -67,3 +71,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
         reader.readAsDataURL(imageInput.files[0]);
     });
 });
+
+const fileName = document.querySelector('.file-name')
+function showname(){
+    var name = document.getElementById('image-input');
+    // alert('Selected file: ' + name.files.item(0).name);
+    fileName.innerHTML=name.files.item(0).name;
+
+}
+
+function refreshPage(){
+    console.log('on close cick')
+    window.location.reload();
+} 
